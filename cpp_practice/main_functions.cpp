@@ -9,9 +9,10 @@ void ObjectParamTest(LifecycleDebug val, LifecycleDebug& ref, LifecycleDebug* p)
 	// Copying is done for first parameter
 }
 
-void ObjectParamTest2(LifecycleDebug* p, LifecycleDebug** pp) {
-	p = new LifecycleDebug; // This leaks memory
+void ObjectParamTest2(LifecycleDebug* p, LifecycleDebug** pp, LifecycleDebug*& ppp) {
+	//p = new LifecycleDebug;		// This leaks memory
 	*pp = new LifecycleDebug;
+	ppp = new LifecycleDebug;
 }
 
 void PrintMemUsage() {

@@ -4,7 +4,7 @@
 
 void ObjectParamTest(LifecycleDebug val, LifecycleDebug & ref, LifecycleDebug* p);
 
-void ObjectParamTest2(LifecycleDebug* p, LifecycleDebug** pp);
+void ObjectParamTest2(LifecycleDebug* p, LifecycleDebug** pp, LifecycleDebug*& ppp);
 
 void PrintMemUsage();
 

@@ -54,7 +54,7 @@ int main() {
 		const char* string_literal = "Milos";
 		/* You cannot do this:
 		/string_literal[3] = 'p'; */
-		string_literal = "Paunovic"; // This is reassigning the pointer so it's allowed
+		string_literal = "Paunovic"; // This is reassigning the pointer to a different literal which is legal
 	}
 
 
@@ -93,7 +93,10 @@ int main() {
 
 		LifecycleDebug* ldp = nullptr;
 		LifecycleDebug* ldp2 = nullptr;
-		ObjectParamTest2(ldp, &ldp2);
+		LifecycleDebug* ldp3 = nullptr;
+		ObjectParamTest2(ldp, &ldp2, ldp3);
+		delete ldp2;
+		delete ldp3;
 
 		string username("Melosh");
 		string username2{ "Melosh" };
@@ -101,7 +104,6 @@ int main() {
 		string username4 = string("Melosh");
 		string username5 = { "Melosh" };
 	}
-	// Reminder: "ld" deleted after going out of scope
 
 
 
@@ -158,6 +160,8 @@ int main() {
 	{
 		unique_ptr<User> ptr = make_unique<User>("Melosh", 28);
 	}
+
+
 
 	// Files
 	{

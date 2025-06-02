@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <vector> 
 #include <map>
 #include <filesystem>
@@ -18,7 +19,7 @@ using std::make_unique, std::unique_ptr;
 using std::filesystem::path;
 using std::fstream;
 
-int main() {
+static void Everything() {
 	// Data types
 	{
 		int v_int = 0;
@@ -196,6 +197,10 @@ int main() {
 	// globals.h included with "extern" variables. Variables implemented in globals.cpp
 	open_project_id = 6;
 	state.open_contact_id = 75;
+}
+
+int main() {
+	Everything();
 
 	return 0;
 }

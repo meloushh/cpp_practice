@@ -1,4 +1,2 @@
-.vs
-bin
-intermediate
-*.vcxproj.user
+bin/
+build/

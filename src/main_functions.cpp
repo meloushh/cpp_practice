@@ -14,6 +14,7 @@
 #include "globals.h"
 
 using namespace std;
+using std::filesystem::path;
 
 void ObjectParamTest(LifecycleDebug val, LifecycleDebug& ref, LifecycleDebug* p) {
 	// Copying is done for first parameter

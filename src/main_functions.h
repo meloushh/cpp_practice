@@ -1,6 +1,6 @@
 #pragma once
 
-#include "classes.h"
+class LifecycleDebug;
 
 void ObjectParamTest(LifecycleDebug val, LifecycleDebug & ref, LifecycleDebug* p);
 
@@ -9,3 +9,5 @@ void ObjectParamTest2(LifecycleDebug* p, LifecycleDebug** pp, LifecycleDebug*& p
 void PrintMemUsage();
 
 void StaticArrayParamTest(char val[], char* ref);
+
+void Cheatsheet();
